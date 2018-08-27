@@ -10,7 +10,7 @@ $link = mysqli_connect($host, $user, $pass);
 	if (!$link) {
 	    die('Could not connect: ' . mysql_error());
 	}
-mysql_select_db($db);
+mysqli_select_db($link,$db);
 // mysql_close($link);
 
 ?>
