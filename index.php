@@ -127,8 +127,8 @@
                                 </div>
                                 <div class="about--options">
                                     <?php
-                                        $query =  mysql_query("SELECT * FROM album where band_id = 'av_ra_oid_fa_01'");
-                                        while($row = (mysql_fetch_assoc($query))){
+                                        $query =  mysqli_query($link,"SELECT * FROM album where band_id = 'av_ra_oid_fa_01'");
+                                        while($row = (mysqli_fetch_assoc($query))){
                                             $image = $row['album_art_url'];
                                             $title = $row['album_title'];
                                             $year = $row['album_year'];
@@ -139,7 +139,7 @@
                                             echo "<br>";
                                             echo "<h2>".$year."</h2>";
                                         } 
-                                        mysql_close($link);?>
+                                        mysqli_close($link);?>
                                     </a>
                                 </div>
                             </div>
